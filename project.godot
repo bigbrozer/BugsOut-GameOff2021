@@ -12,7 +12,6 @@ config_version=4
 
 config/name="BugsOut"
 config/description="Capture maximum bugs before your opponents."
-run/main_scene="res://scenes/tests_empty/test_empty.tscn"
 boot_splash/image="res://resources/splash/splash.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
