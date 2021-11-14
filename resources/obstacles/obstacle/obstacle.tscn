@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 16 )
 
-[node name="obstacle_wood" type="Area2D"]
+[node name="Obstacle" type="Area2D" groups=["obstacles"]]
 position = Vector2( 640, 360 )
 script = ExtResource( 1 )
 
@@ -18,4 +18,4 @@ shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
 
-[connection signal="input_event" from="." to="." method="_on_obstacle_wood_input_event"]
+[connection signal="input_event" from="." to="." method="_on_Obstacle_input_event"]

@@ -1,8 +1,8 @@
 extends Area2D
 
-onready var tween = get_node("Tween")
-const rotate_step_angle = PI / 2 # 90 deg
-const rotate_speed = 1.0
+const ROTATE_STEP_ANGLE = PI / 2 # 90 deg
+
+export(float) var rotate_speed = 0.2
 
 #-------------------------------------------------------------------------------
 # Parent methods
@@ -19,24 +19,24 @@ func _process(_delta):
 #-------------------------------------------------------------------------------
 
 func rotate_clockwise():
-    var _new_angle = 0
+    var _new_angle: float
 
-    if not tween.is_active():
+    if not $Tween.is_active():
         if self.rotation >= TAU:
             self.rotation = 0
-        _new_angle = self.rotation + rotate_step_angle
-        print_debug("action='show current rotation angle' source='%s' value='%f'" % [self, self.rotation])
-        print_debug("action='update rotation angle' source='%s' value='%f'" % [self, _new_angle])
-        tween.interpolate_property(self, "rotation",
+        _new_angle = self.rotation + ROTATE_STEP_ANGLE
+        print_debug(
+            "action='update rotation angle' source='%s' value='%f'" % [self, _new_angle])
+        $Tween.interpolate_property(self, "rotation",
                                    self.rotation, _new_angle, rotate_speed,
-                                   Tween.TRANS_LINEAR, Tween.EASE_OUT)
-        tween.start()
+                                   Tween.TRANS_BACK, Tween.EASE_OUT)
+        $Tween.start()
 
 #-------------------------------------------------------------------------------
 # Connected signals
 #-------------------------------------------------------------------------------
 
-func _on_obstacle_wood_input_event(_viewport, event, _shape_idx):
+func _on_Obstacle_input_event(_viewport, event, _shape_idx):
     if (event is InputEventMouseButton && event.pressed):
         print_debug("action='mouse click' source='%s' value='%s'" % [self, event])
         rotate_clockwise()
