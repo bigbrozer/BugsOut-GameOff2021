@@ -1,17 +1,24 @@
-extends Area2D
+extends StaticBody2D
 
 const ROTATE_STEP_ANGLE = PI / 2 # 90 deg
 
 export(float) var rotate_speed = 0.2
+export(int) var start_angle = 0
+
+onready var RotateTween = get_node("Tween")
 
 #-------------------------------------------------------------------------------
 # Parent methods
 #-------------------------------------------------------------------------------
 
-func _ready():
-    rotation = 0.0
+func _init():
+    add_to_group("obstacles")
 
-func _process(_delta):
+func _ready():
+    rotation = deg2rad(start_angle)
+    input_pickable = true
+
+func _physics_process(_delta):
     pass
 
 #-------------------------------------------------------------------------------
@@ -21,16 +28,16 @@ func _process(_delta):
 func rotate_clockwise():
     var _new_angle: float
 
-    if not $Tween.is_active():
-        if self.rotation >= TAU:
-            self.rotation = 0
-        _new_angle = self.rotation + ROTATE_STEP_ANGLE
+    if not RotateTween.is_active():
+        if rotation >= TAU:
+            rotation = 0
+        _new_angle = rotation + ROTATE_STEP_ANGLE
         print_debug(
             "action='update rotation angle' source='%s' value='%f'" % [self, _new_angle])
-        $Tween.interpolate_property(self, "rotation",
-                                   self.rotation, _new_angle, rotate_speed,
-                                   Tween.TRANS_BACK, Tween.EASE_OUT)
-        $Tween.start()
+        RotateTween.interpolate_property(self, "rotation",
+                                   rotation, _new_angle, rotate_speed,
+                                   RotateTween.TRANS_BACK, RotateTween.EASE_OUT)
+        RotateTween.start()
 
 #-------------------------------------------------------------------------------
 # Connected signals

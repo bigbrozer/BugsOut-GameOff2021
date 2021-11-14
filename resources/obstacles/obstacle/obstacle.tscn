@@ -6,9 +6,12 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 16 )
 
-[node name="Obstacle" type="Area2D" groups=["obstacles"]]
+[node name="Obstacle" type="StaticBody2D"]
 position = Vector2( 640, 360 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
