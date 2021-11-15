@@ -5,7 +5,7 @@ const ROTATE_STEP_ANGLE = PI / 2 # 90 deg
 export(float) var rotate_speed = 0.2
 export(int) var start_angle = 0
 
-onready var RotateTween = get_node("Tween")
+onready var RotateTween = get_node("RotateTween")
 
 #-------------------------------------------------------------------------------
 # Parent methods
@@ -18,17 +18,14 @@ func _ready():
     rotation = deg2rad(start_angle)
     input_pickable = true
 
-func _physics_process(_delta):
-    pass
-
 #-------------------------------------------------------------------------------
 # Instance methods
 #-------------------------------------------------------------------------------
 
 func rotate_clockwise():
-    var _new_angle: float
-
     if not RotateTween.is_active():
+        var _new_angle: float
+
         if rotation >= TAU:
             rotation = 0
         _new_angle = rotation + ROTATE_STEP_ANGLE

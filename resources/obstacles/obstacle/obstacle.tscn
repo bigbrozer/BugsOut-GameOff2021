@@ -7,7 +7,7 @@
 extents = Vector2( 64, 16 )
 
 [node name="Obstacle" type="StaticBody2D"]
-position = Vector2( 640, 360 )
+position = Vector2( 320, 240 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -19,6 +19,6 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Tween" type="Tween" parent="."]
+[node name="RotateTween" type="Tween" parent="."]
 
 [connection signal="input_event" from="." to="." method="_on_Obstacle_input_event"]

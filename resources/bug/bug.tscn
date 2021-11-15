@@ -7,7 +7,7 @@
 extents = Vector2( 47, 11 )
 
 [node name="Bug" type="KinematicBody2D"]
-position = Vector2( 640, 360 )
+position = Vector2( 320, 240 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

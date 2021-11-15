@@ -6,36 +6,36 @@
 [node name="TestBugCollision" type="Node2D"]
 
 [node name="Bug" parent="." instance=ExtResource( 1 )]
-position = Vector2( 608, 352 )
+position = Vector2( 312, 232 )
 
 [node name="Obstacle" parent="." instance=ExtResource( 2 )]
-position = Vector2( 544, 272 )
+position = Vector2( 248, 152 )
 
 [node name="Obstacle2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 816, 272 )
+position = Vector2( 520, 152 )
 
 [node name="Obstacle3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 408, 272 )
+position = Vector2( 112, 152 )
 
 [node name="Obstacle4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 680, 272 )
+position = Vector2( 384, 152 )
 
 [node name="Obstacle5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 544, 432 )
+position = Vector2( 248, 312 )
 
 [node name="Obstacle6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 816, 432 )
+position = Vector2( 520, 312 )
 
 [node name="Obstacle7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 408, 432 )
+position = Vector2( 112, 312 )
 
 [node name="Obstacle9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 344, 352 )
+position = Vector2( 32, 232 )
 start_angle = 90
 
 [node name="Obstacle10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 880, 352 )
+position = Vector2( 600, 232 )
 start_angle = 90
 
 [node name="Obstacle8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 680, 432 )
+position = Vector2( 384, 312 )
