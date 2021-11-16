@@ -4,10 +4,11 @@
 [ext_resource path="res://resources/bug/bug.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 47, 11 )
+extents = Vector2( 31, 7 )
 
 [node name="Bug" type="KinematicBody2D"]
 position = Vector2( 320, 240 )
+collision_layer = 2
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

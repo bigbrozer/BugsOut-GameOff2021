@@ -8,6 +8,7 @@ extents = Vector2( 64, 16 )
 
 [node name="Obstacle" type="StaticBody2D"]
 position = Vector2( 320, 240 )
+collision_mask = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true

@@ -1,30 +1,32 @@
 extends KinematicBody2D
 
-var rotation_dir: int = 0
+var shaking_amount: float = 0.8
+var shaking_angle: float = 0.1
 var velocity: Vector2
 
 export(int) var speed = 200
-export(float) var rotation_speed = 1.5
 
 #-------------------------------------------------------------------------------
 # Parent methods
 #-------------------------------------------------------------------------------
 
-func _ready():
-    pass
-
 func _physics_process(delta):
-    get_input()
-    velocity = move_and_slide(velocity)
+    update_position(delta)
 
 #-------------------------------------------------------------------------------
 # Instance methods
 #-------------------------------------------------------------------------------
 
-func get_input():
-    look_at(get_global_mouse_position())
-    velocity = Vector2()
+func update_position(delta):
+    var rotation_jittery: float = shaking_angle * shaking_amount * rand_range(-1, 1)
     velocity = Vector2(speed, 0).rotated(rotation)
+    rotation = rotation + rotation_jittery
+
+    var collision = move_and_collide(velocity * delta)
+    if collision:
+        var body = collision.get_collider()
+        if body.is_in_group("obstacles"):
+            velocity = velocity.slide(collision.normal)
 
 #-------------------------------------------------------------------------------
 # Connected signals

@@ -3,7 +3,6 @@ extends StaticBody2D
 const ROTATE_STEP_ANGLE = PI / 2 # 90 deg
 
 export(float) var rotate_speed = 0.2
-export(int) var start_angle = 0
 
 onready var RotateTween = get_node("RotateTween")
 
@@ -15,7 +14,6 @@ func _init():
     add_to_group("obstacles")
 
 func _ready():
-    rotation = deg2rad(start_angle)
     input_pickable = true
 
 #-------------------------------------------------------------------------------
