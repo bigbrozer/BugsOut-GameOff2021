@@ -6,63 +6,63 @@
 [node name="TestBugCollision" type="Node2D"]
 
 [node name="Bug" parent="." instance=ExtResource( 1 )]
-position = Vector2( 148, 329 )
+position = Vector2( 160, 320 )
 
 [node name="ObstacleT0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 176, 88 )
+position = Vector2( 184, 104 )
 
 [node name="ObstacleT1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 320, 88 )
+position = Vector2( 312, 104 )
 
 [node name="ObstacleIH0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 176, 248 )
+position = Vector2( 184, 248 )
 
 [node name="ObstacleIH1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 320, 248 )
+position = Vector2( 312, 248 )
 
 [node name="ObstacleIH2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 464, 248 )
+position = Vector2( 440, 248 )
 
 [node name="ObstacleT2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 464, 88 )
+position = Vector2( 440, 104 )
 
 [node name="ObstacleB0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 176, 408 )
+position = Vector2( 184, 392 )
 
 [node name="ObstacleB1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 320, 408 )
+position = Vector2( 312, 392 )
 
 [node name="ObstacleB2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 464, 408 )
+position = Vector2( 440, 392 )
 
 [node name="ObstacleL0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 96, 168 )
+position = Vector2( 104, 184 )
 rotation = 1.5708
 
 [node name="ObstacleL1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 96, 328 )
+position = Vector2( 104, 312 )
 rotation = 1.5708
 
 [node name="ObstacleIVL0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 248, 168 )
+position = Vector2( 248, 184 )
 rotation = 1.5708
 
 [node name="ObstacleIVL1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 248, 328 )
+position = Vector2( 248, 312 )
 rotation = 1.5708
 
 [node name="ObstacleIVR0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 392, 168 )
+position = Vector2( 376, 184 )
 rotation = 1.5708
 
 [node name="ObstacleIVR1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 392, 328 )
+position = Vector2( 376, 312 )
 rotation = 1.5708
 
 [node name="ObstacleR0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 544, 168 )
+position = Vector2( 520, 184 )
 rotation = 1.5708
 
 [node name="ObstacleR1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 544, 328 )
+position = Vector2( 520, 312 )
 rotation = 1.5708
