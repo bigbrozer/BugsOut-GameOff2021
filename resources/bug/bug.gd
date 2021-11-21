@@ -29,9 +29,13 @@ func _physics_process(delta):
         steering = steering.slide(normal)
 
         if part.name == "HeadCollision":
-            aim = steering.bounce(normal)
+            if randi() % 10 <= 4:
+                aim = steering.bounce(normal)
+            else:
+                aim = steering.bounce(-normal)
 
-        move_and_collide(steering * delta)
+        # warning-ignore:return_value_discarded
+        move_and_slide(steering * delta)
 
 #-------------------------------------------------------------------------------
 # Instance methods
