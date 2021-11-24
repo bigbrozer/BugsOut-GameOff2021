@@ -4,7 +4,7 @@
 [ext_resource path="res://resources/obstacles/obstacle/obstacle.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 64, 16 )
+extents = Vector2( 47, 7 )
 
 [node name="Obstacle" type="StaticBody2D"]
 position = Vector2( 320, 240 )

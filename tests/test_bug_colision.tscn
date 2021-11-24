@@ -1,68 +1,96 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/bug/bug.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/obstacles/obstacle/obstacle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/board/board.tscn" type="PackedScene" id=3]
 
 [node name="TestBugCollision" type="Node2D"]
 
+[node name="Board" parent="." instance=ExtResource( 3 )]
+
 [node name="Bug" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 320 )
+position = Vector2( 464, 240 )
 
-[node name="ObstacleT0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 184, 104 )
+[node name="Obstacle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 72 )
 
-[node name="ObstacleT1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 312, 104 )
+[node name="Obstacle3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 296, 128 )
+rotation = -1.57079
 
-[node name="ObstacleIH0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 184, 248 )
+[node name="Obstacle2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 72 )
 
-[node name="ObstacleIH1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 312, 248 )
+[node name="Obstacle4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 576, 184 )
 
-[node name="ObstacleIH2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 440, 248 )
+[node name="Obstacle5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 296, 240 )
+rotation = -1.57079
 
-[node name="ObstacleT2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 440, 104 )
+[node name="Obstacle6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 184 )
 
-[node name="ObstacleB0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 184, 392 )
+[node name="Obstacle7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 296 )
 
-[node name="ObstacleB1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 312, 392 )
+[node name="Obstacle8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 296, 352 )
+rotation = -1.57079
 
-[node name="ObstacleB2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 440, 392 )
+[node name="Obstacle12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 408, 128 )
+rotation = -1.57079
 
-[node name="ObstacleL0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 104, 184 )
-rotation = 1.5708
+[node name="Obstacle13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 408, 240 )
+rotation = -1.57079
 
-[node name="ObstacleL1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 104, 312 )
-rotation = 1.5708
+[node name="Obstacle14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 408, 352 )
+rotation = -1.57079
 
-[node name="ObstacleIVL0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 248, 184 )
-rotation = 1.5708
+[node name="Obstacle15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 520, 128 )
+rotation = -1.57079
 
-[node name="ObstacleIVL1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 248, 312 )
-rotation = 1.5708
+[node name="Obstacle16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 520, 240 )
+rotation = -1.57079
 
-[node name="ObstacleIVR0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 376, 184 )
-rotation = 1.5708
+[node name="Obstacle17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 520, 352 )
+rotation = -1.57079
 
-[node name="ObstacleIVR1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 376, 312 )
-rotation = 1.5708
+[node name="Obstacle18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 632, 128 )
+rotation = -1.57079
 
-[node name="ObstacleR0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 520, 184 )
-rotation = 1.5708
+[node name="Obstacle19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 632, 240 )
+rotation = -1.57079
 
-[node name="ObstacleR1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 520, 312 )
-rotation = 1.5708
+[node name="Obstacle20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 632, 352 )
+rotation = -1.57079
+
+[node name="Obstacle9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 296 )
+
+[node name="Obstacle22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 184 )
+
+[node name="Obstacle24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 576, 296 )
+
+[node name="Obstacle10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 408 )
+
+[node name="Obstacle11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 408 )
+
+[node name="Obstacle21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 576, 72 )
+
+[node name="Obstacle23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 576, 408 )
