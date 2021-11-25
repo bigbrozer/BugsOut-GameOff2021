@@ -4,6 +4,9 @@
 
 [node name="Board" type="StaticBody2D"]
 collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

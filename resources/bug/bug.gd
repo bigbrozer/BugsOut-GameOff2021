@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal catched
+
 var velocity: Vector2
 var aim: Vector2 = Vector2.RIGHT
 
@@ -11,6 +13,19 @@ var max_steering: float = 2.5
 #-------------------------------------------------------------------------------
 
 func _physics_process(delta):
+    _move(delta)
+
+#-------------------------------------------------------------------------------
+# Instance methods
+#-------------------------------------------------------------------------------
+
+# Update the bug position.
+#
+# Parameters:
+#
+# * `delta`: the delta value from `*_process` methods.
+#
+func _move(delta):
     var steering: Vector2 = Vector2.ZERO
 
     steering += seek_steering()
@@ -37,10 +52,9 @@ func _physics_process(delta):
         # warning-ignore:return_value_discarded
         move_and_slide(steering * delta)
 
-#-------------------------------------------------------------------------------
-# Instance methods
-#-------------------------------------------------------------------------------
 
+# Calculate the steering vector.
+#
 func seek_steering() -> Vector2:
     var desired_velocity: Vector2 = aim.normalized() * max_speed
     return desired_velocity - velocity
@@ -48,3 +62,6 @@ func seek_steering() -> Vector2:
 #-------------------------------------------------------------------------------
 # Connected signals
 #-------------------------------------------------------------------------------
+
+func _on_Bug_catched():
+    queue_free()

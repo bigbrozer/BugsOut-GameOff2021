@@ -27,3 +27,5 @@ shape = SubResource( 2 )
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
 position = Vector2( -5.5, 0 )
 shape = SubResource( 3 )
+
+[connection signal="catched" from="." to="." method="_on_Bug_catched"]
