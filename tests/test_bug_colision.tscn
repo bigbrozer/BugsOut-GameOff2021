@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://resources/bug/bug.tscn" type="PackedScene" id=1]
-[ext_resource path="res://resources/obstacles/obstacle/obstacle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/obstacle/obstacle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/board/board.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/trap/trap.tscn" type="PackedScene" id=4]
 [ext_resource path="res://resources/trap/cookie.png" type="Texture" id=5]
