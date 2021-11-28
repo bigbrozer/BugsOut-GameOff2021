@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+signal activated
+
 const ROTATE_STEP_ANGLE = PI / 2 # 90 deg
 
 export(float) var rotate_speed = 0.2
@@ -9,9 +11,6 @@ onready var RotateTween = get_node("RotateTween")
 #-------------------------------------------------------------------------------
 # Parent methods
 #-------------------------------------------------------------------------------
-
-func _init():
-    add_to_group("obstacles")
 
 func _ready():
     input_pickable = true
@@ -42,3 +41,4 @@ func _on_Obstacle_input_event(_viewport, event, _shape_idx):
     if (event is InputEventMouseButton && event.pressed):
         print_debug("action='mouse click' source='%s' value='%s'" % [self, event])
         rotate_clockwise()
+        emit_signal("activated")
