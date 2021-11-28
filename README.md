@@ -12,6 +12,12 @@ Each turn, player rolls a dice to know which obstacle they can rotate to create 
 
 All inspiration is coming from [Bugs in the Kitchen](https://boardgamegeek.com/boardgame/137909/bugs-kitchen) board game by Ravensburger.
 
+## Next steps
+
+* [ ] Add support for 2 (current) to 4 players in local (current) and remote
+* [ ] Mobile support (Android / Web)
+* [ ] [Steam with Remote Play Together](https://github.com/Gramps/GodotSteam) (instead of custom server ?)
+
 ## Developers
 
 Some resources for the developers around.
@@ -23,9 +29,27 @@ Some resources for the developers around.
 | `resources/` | Resources such as images, fonts, ... used in the game |
 | `tests/`     | Testing scenes game logic                             |
 
-## Attributions
+## License
 
-* https://opengameart.org/content/pixel-cookie
-* https://opengameart.org/content/cartoon-food
-* https://opengameart.org/content/apple-2
-* https://opengameart.org/content/earwig-top-down
+See [LICENSE.txt](LICENSE.txt).
+
+## Credits
+
+This game uses [Godot Engine](https://godotengine.org/).
+
+Sprites have been created using [Aseprite](https://www.aseprite.org/).
+
+Arts:
+
+* [Cookie](https://opengameart.org/content/pixel-cookie)
+* [Cheese and carrot](https://opengameart.org/content/cartoon-food)
+* [Apple](https://opengameart.org/content/apple-2)
+* [Bug animation](https://opengameart.org/content/earwig-top-down)
+
+Books:
+
+* [The Nature of Code](https://natureofcode.com/)
+
+Community:
+
+* [r/godot](https://www.reddit.com/r/godot/)
