@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/bug/bug.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/trap/trap_apple.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/trap/trap_carrot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resources/trap/trap_cheese.tscn" type="PackedScene" id=6]
+[ext_resource path="res://resources/trap/trap_cookie.tscn" type="PackedScene" id=7]
+
+[node name="TestBugCollision" type="Node2D"]
+
+[node name="Bug" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 96 )
+
+[node name="Bug2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 192 )
+
+[node name="Bug3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 288 )
+
+[node name="Bug4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 384 )
+
+[node name="Traps" type="Node" parent="."]
+
+[node name="TrapCheese" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( 480, 288 )
+
+[node name="TrapCookie" parent="Traps" instance=ExtResource( 7 )]
+position = Vector2( 480, 384 )
+
+[node name="TrapCarrot" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 480, 96 )
+
+[node name="TrapApple" parent="Traps" instance=ExtResource( 4 )]
+position = Vector2( 480, 192 )

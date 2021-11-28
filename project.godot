@@ -19,7 +19,7 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 window/size/width=768
 window/size/height=480
-window/size/test_width=1920
+window/size/test_width=1440
 window/size/test_height=1080
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
