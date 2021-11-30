@@ -49,9 +49,6 @@ font_data = ExtResource( 3 )
 [node name="Coin" type="Node2D"]
 position = Vector2( 368, 240 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
@@ -68,6 +65,15 @@ custom_fonts/font = SubResource( 8 )
 text = "0"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TrapImage" type="TextureRect" parent="."]
+margin_left = -52.0
+margin_top = -16.0
+margin_right = -20.0
+margin_bottom = 16.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

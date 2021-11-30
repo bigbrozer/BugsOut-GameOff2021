@@ -44,10 +44,13 @@ func new_turn():
 func assign_trap(player: Node):
     var idx: int = randi() % Traps.size()
     var trap: Area2D = Traps[idx]
+    var door: StaticBody2D = Doors[idx]
     Traps.remove(idx)
-    Doors[idx].queue_free()
+    Doors.remove(idx)
+    player.get_node("Coin").set_trap_image(trap)
     trap.player = player
-    print_debug('action="assign trap" source="%s" target="%s"' % [trap, player])
+    door.queue_free()
+    print_debug('action="assign trap" source="%s" target="%s" door="%s"' % [trap, player, door])
 
 
 func remove_remaining_traps():
@@ -72,8 +75,6 @@ func _on_Obstacle_activated():
 func _on_Bug_catched():
     Bug.position = BugStartPosition.position
     Bug.show()
-
     for obstacle in Obstacles:
         obstacle.restart()
-
     Bug.set_process(true)
