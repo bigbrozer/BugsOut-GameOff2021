@@ -1,5 +1,9 @@
 # Bugs Out
 
+<div align="center">
+<img src="https://img.shields.io/github/license/bigbrozer/BugsOut-GameOff2021?style=for-the-badge" /> <img src="https://raw.githubusercontent.com/bigbrozer/BugsOut-GameOff2021/main/.readme/godot_badge.png" />
+</div>
+
 This game is developed using the excellent [Godot Engine](https://godotengine.org/) and is my submission for the [Game Off 2021](https://itch.io/jam/game-off-2021) jam.
 
 * [Description](#description)
