@@ -59,9 +59,12 @@ func seek_steering() -> Vector2:
     var desired_velocity: Vector2 = aim.normalized() * max_speed
     return desired_velocity - velocity
 
-#-------------------------------------------------------------------------------
-# Connected signals
-#-------------------------------------------------------------------------------
 
-func _on_Bug_catched():
-    queue_free()
+# Bug is catched
+#
+func catch(trap: Area2D):
+    print_debug('action="bug catched" player="%s" source="%s"' % [trap.player, trap])
+    hide()
+    set_process(false)
+    trap.player.get_node("Coin").increment_score()
+    emit_signal("catched")

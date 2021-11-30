@@ -1,5 +1,7 @@
 extends Area2D
 
+var player: Node
+
 #-------------------------------------------------------------------------------
 # Parent methods
 #-------------------------------------------------------------------------------
@@ -14,4 +16,4 @@ extends Area2D
 
 func _on_Trap_body_entered(body):
     print_debug("action='bug entered trap' source='%s' name='%s'" % [self, body.name])
-    body.emit_signal("catched")
+    body.catch(self)
