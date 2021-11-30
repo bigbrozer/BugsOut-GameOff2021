@@ -3,8 +3,9 @@ extends Node
 onready var Bug: KinematicBody2D = get_node("Bug")
 onready var BugStartPosition: Position2D = get_node("BugStartPosition")
 onready var Dice: Node2D = get_node("Dice")
-onready var Traps: Array = get_tree().get_nodes_in_group("traps")
-onready var Obstacles: Array = get_tree().get_nodes_in_group("obstacles")
+onready var Traps: Array = get_node("Traps").get_children()
+onready var Doors: Array = get_node("Doors").get_children()
+onready var Obstacles: Array = get_node("Obstacles").get_children()
 onready var PlayerOne: Node = get_node("PlayerOne")
 onready var PlayerTwo: Node = get_node("PlayerTwo")
 
@@ -44,17 +45,20 @@ func assign_trap(player: Node):
     var idx: int = randi() % Traps.size()
     var trap: Area2D = Traps[idx]
     Traps.remove(idx)
+    Doors[idx].queue_free()
     trap.player = player
     print_debug('action="assign trap" source="%s" target="%s"' % [trap, player])
+
+
+func remove_remaining_traps():
+    for trap_remains in Traps:
+        trap_remains.queue_free()
 
 
 func new_game():
     assign_trap(PlayerOne)
     assign_trap(PlayerTwo)
-
-    for trap_remains in Traps:
-        trap_remains.queue_free()
-
+    remove_remaining_traps()
     new_turn()
 
 #-------------------------------------------------------------------------------
