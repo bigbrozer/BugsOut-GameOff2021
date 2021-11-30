@@ -29,6 +29,9 @@ position = Vector2( 80, 240 )
 [node name="Bug" parent="." instance=ExtResource( 1 )]
 position = Vector2( 464, 240 )
 
+[node name="BugStartPosition" type="Position2D" parent="."]
+position = Vector2( 464, 240 )
+
 [node name="Traps" type="Node" parent="."]
 
 [node name="TrapCheese" parent="Traps" instance=ExtResource( 6 )]
@@ -163,8 +166,5 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="BugStartPosition" type="Position2D" parent="."]
-position = Vector2( 464, 240 )
 
 [connection signal="catched" from="Bug" to="." method="_on_Bug_catched"]
