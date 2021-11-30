@@ -4,15 +4,17 @@ signal catched
 
 var velocity: Vector2
 var aim: Vector2 = Vector2.UP
-
 var max_speed: int = 100
 var max_steering: float = 2.5
+
+onready var AnimatedSprite: AnimatedSprite = get_node("AnimatedSprite")
 
 #-------------------------------------------------------------------------------
 # Parent methods
 #-------------------------------------------------------------------------------
 
 func _physics_process(delta):
+    AnimatedSprite.play()
     _move(delta)
 
 #-------------------------------------------------------------------------------
