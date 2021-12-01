@@ -49,7 +49,6 @@ font_data = ExtResource( 3 )
 [node name="Coin" type="Node2D"]
 position = Vector2( 368, 240 )
 script = ExtResource( 1 )
-target_score = 1
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
