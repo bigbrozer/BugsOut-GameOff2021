@@ -1,11 +1,20 @@
-# Bugs Out
-
 <div align="center">
+<img src="https://raw.githubusercontent.com/bigbrozer/BugsOut-GameOff2021/main/.readme/cover.png" />
 <img src="https://img.shields.io/github/license/bigbrozer/BugsOut-GameOff2021?style=for-the-badge" /> <img src="https://raw.githubusercontent.com/bigbrozer/BugsOut-GameOff2021/main/.readme/godot_badge.png" />
 </div>
 
+## Play in browser
+
+<div align="center">
+<a href="https://bigbrozer.itch.io/bugs-out" target="_blank"><img src="https://raw.githubusercontent.com/bigbrozer/BugsOut-GameOff2021/main/.readme/itch_widget.png" /></a>
+</div>
+
+## About the game
+
 This game is developed using the excellent [Godot Engine](https://godotengine.org/) and is my submission for the [Game Off 2021](https://itch.io/jam/game-off-2021) jam.
 
+* [Play in browser](#play-in-browser)
+* [About the game](#about-the-game)
 * [Description](#description)
 * [Inspiration](#inspiration)
 * [Development](#development)
