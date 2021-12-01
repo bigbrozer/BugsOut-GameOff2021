@@ -15,6 +15,7 @@ config/description="Capture maximum bugs before your opponents."
 run/main_scene="res://main.tscn"
 boot_splash/image="res://resources/splash/splash.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://resources/splash/favicon.png"
 
 [autoload]
 
