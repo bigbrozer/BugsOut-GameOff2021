@@ -40,8 +40,6 @@ func rotate_clockwise(angle: float = ROTATE_STEP_ANGLE, is_relative: bool = true
         else:
             _angle = angle
 
-        print_debug(
-            "action='update rotation angle' source='%s' value='%f'" % [self, _angle])
         RotateTween.interpolate_property(self, "rotation",
                                    rotation, _angle, rotate_speed,
                                    RotateTween.TRANS_BACK, RotateTween.EASE_OUT)

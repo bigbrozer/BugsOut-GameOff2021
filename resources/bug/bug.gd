@@ -46,7 +46,7 @@ func _move(delta):
         steering = steering.slide(normal)
 
         if part.name == "HeadCollision":
-            if randi() % 10 <= 4:
+            if randi() % 10 < 3:
                 aim = steering.bounce(normal)
             else:
                 aim = steering.bounce(-normal)

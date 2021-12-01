@@ -16,6 +16,10 @@ run/main_scene="res://main.tscn"
 boot_splash/image="res://resources/splash/splash.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
+[autoload]
+
+Globals="*res://globals.gd"
+
 [display]
 
 window/size/width=768
